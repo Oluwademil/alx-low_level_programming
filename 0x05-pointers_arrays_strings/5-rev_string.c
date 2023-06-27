@@ -2,7 +2,7 @@
 
 /**
 * rev_string -  reverse a string
-* @str: pointer pointing to a sting
+* @s: pointer pointing to a sting
 * Return: 0
 */
 

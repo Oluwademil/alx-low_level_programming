@@ -8,5 +8,6 @@ int main(void)
 {
         printf("check the code\n");
         return (0);
+}
 
 

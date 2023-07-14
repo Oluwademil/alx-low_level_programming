@@ -16,16 +16,16 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	char *x;
 	unsigned int y;
 
-	if (nmemb == 0 || size == 0)
+	if (nmemb == 0 || size  == 0)
 		return (NULL);
 
-	n = malloc(size + nmemb);
+	n = malloc(size * nmemb);
 
 	if (n == NULL)
 		return (NULL);
 	x = n;
 
-	for (y = 0; y < (size + nmemb); y++)
+	for (y = 0; y < (size * nmemb); y++)
 
 		x[y] = '\0';
 	return (n);

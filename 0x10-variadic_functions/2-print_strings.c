@@ -3,9 +3,9 @@
 #include <stdarg.h>
 
 /**
- * print_strings - print strings
- * @separator: separator between strings
- * @n: number of arguments
+ * print_strings - print strings followed by a new line
+ * @separator: string to be printed  between strings
+ * @n: number of arguments passed to the function
  */
 
 void print_strings(const char *separator, const unsigned int n, ...)
@@ -22,7 +22,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		str = va_arg(list, char *);
 		if (!str)
-			str = "nil";
+			str = ("nil");
 		if (!separator)
 			printf("%s", str);
 		else if (separator && j == 0)

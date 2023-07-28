@@ -2,9 +2,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stddef.h>
 
 /**
- * print_list - print all the elements of a list_t list
+ * print_list - Print elements of a list_t list
  * @h: list_t list
  * Return: number of nodes in h
  */
@@ -12,7 +13,7 @@
 size_t print_list(const list_t *h)
 {
 
-	size_t i = 0;
+	int i = 0;
 
 	while (h)
 	{
@@ -21,8 +22,8 @@ size_t print_list(const list_t *h)
 
 		else
 			printf("[%d] %s\n", h->len, h->str);
-		i++;
 		h = h->next;
+		i++;
 	}
 	return (i);
 }

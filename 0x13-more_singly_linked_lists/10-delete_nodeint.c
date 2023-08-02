@@ -28,11 +28,12 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	{
 		if (temp->next == NULL)
 			return (-1);
+
 		temp = temp->next;
+	}
 		loot = temp->next;
 		temp->next = loot->next;
 		free(loot);
-	}
 		return (1);
 }
 

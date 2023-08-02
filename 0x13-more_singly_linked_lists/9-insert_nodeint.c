@@ -29,10 +29,10 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		*head = current;
 		return (current);
 	}
-	
+
 	for (element = 0; element < (idx - 1); element++)
 	{
-		
+
 		if (temp == NULL || temp->next == NULL)
 			return (NULL);
 

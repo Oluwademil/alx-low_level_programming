@@ -15,7 +15,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	int x, y = 0;
 
 
-	for (x = 53; x >= 0; x--)
+	for (x = 60; x >= 0; x--)
 	{
 		flap = flop >> x;
 

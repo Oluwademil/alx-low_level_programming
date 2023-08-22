@@ -59,9 +59,9 @@ void close_file(int fd)
  * @argv: Arrays that points to th argument
  * Return: 0 at success
  * Description: The program should exit at 97 if argument count is incorrect
- * if file_from doesn't exist or can't be read - exit at 98
- * if file_to can't be wrriten or created - exit at 99
- * if file_from/file_to can't be closed or exist - exit 100
+ * if file_from does not exist or cannot be read - exit at 98
+ * if file_to cannot be wrriten or created - exit at 99
+ * if file_from or file_to cannot be closed or exist - exit 100
  */
 
 

@@ -47,7 +47,7 @@ void close_file(int fd)
 	i = close(fd);
 	if (i == -1)
 	{
-		dprintf(STDERR_FILENO, 
+		dprintf(STDERR_FILENO,
 				"Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
@@ -57,11 +57,11 @@ void close_file(int fd)
  * main - To copy the content of a file into another
  * @argc: This is the number of argument to be copied
  * @argv: Arrays that points to th argument
+ * Return: 0 at success
  * Description: The program should exit at 97 if argument count is incorrect
  * if file_from doesn't exist or can't be read - exit at 98
  * if file_to can't be wrriten or created - exit at 99
  * if file_from/file_to can't be closed or exist - exit 100
- * Return: 0 on success
  */
 
 
@@ -87,7 +87,7 @@ int main(int argc, char *argv[])
 		if (from == -1 || a == -1)
 		{
 			dprintf(STDERR_FILENO,
-					"Error : Cannot read from %s\n", argv[1]);
+					"Error : Cannot read from file %s\n", argv[1]);
 			free(buffer);
 			exit(98);
 		}
@@ -96,7 +96,7 @@ int main(int argc, char *argv[])
 		if (to == -1 || b == -1)
 		{
 			dprintf(STDERR_FILENO,
-					"Error: Cannot write from %s\n", argv[2]);
+					"Error: Can't write to %s\n", argv[2]);
 			free(buffer);
 			exit(99);
 		}

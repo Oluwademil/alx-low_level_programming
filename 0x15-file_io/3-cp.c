@@ -27,7 +27,7 @@ char *create_buffer(char *file)
 	if (buffer == NULL)
 	{
 		dprintf(STDERR_FILENO,
-				"Error: Can't write from %s\n", file);
+				"Error: Can't write to %s\n", file);
 		exit(99);
 	}
 	return (buffer);
@@ -35,7 +35,7 @@ char *create_buffer(char *file)
 
 /**
  * close_file - Close the written file
- * @fd: The file to be terminated
+ * @fd: File descriptor to be close
  */
 
 
@@ -47,7 +47,8 @@ void close_file(int fd)
 	i = close(fd);
 	if (i == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		dprintf(STDERR_FILENO, 
+				"Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 }
